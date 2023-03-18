@@ -1,0 +1,33 @@
+Create database task;
+use task;
+
+create table Sales(
+    ID int (10),
+    Product varchar (30),
+    Units int (255),
+    Cost int (255),
+    Revenue int (255),
+    Profit int (255),
+    PRIMARY KEY(ID)
+);
+
+Insert into sales
+(ID, Product, Units,Cost,Revenue,Profit)
+VALUES (1, 'Chair', 300, 300, 750, 450),
+(2, 'Iron', 100, 200, 600, 400),
+(3, 'Razors', 500, 500, 1500, 1000),
+(4, 'Headphones', 50, 300, 730, 430),
+(5, 'Dog-leash', 170, 400, 500, 100),
+(6, 'Fans', 220, 600, 1200, 600),
+(7, 'Footballs', 800, 1600, 1650 , 50),
+(8, 'Usb', 70 , 400, 600, 200),
+(9, 'Scrubs', 250, 1000, 2000 ,1000),
+(10, 'Gel', 50, 300, 470, 170);
+
+UPDATE sales
+SET Units = 120
+WHERE Product = 'Iron'
+
+DELETE FROM sales
+WHERE ID = 4
+
